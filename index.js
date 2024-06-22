@@ -1,5 +1,5 @@
 //Number of fruits
-const FRUIT_COUNT = 20;
+const FRUIT_COUNT = 50;
 
 const scoreContainer = document.getElementById("score-container");
 const canvas = document.getElementById("canvas");
@@ -14,7 +14,7 @@ const overText = document.getElementById("over-text");
 const base = "Images/";
 let fruits = [];
 let points = 0;
-const fruitsList = ["apple", "banana", "grapes"];
+const fruitsList = ["apple", "banana", "grapes", "orange", "pear", "pineapple", "strawberry", "watermelon"];
 
 // Events object
 let events = {
@@ -144,7 +144,7 @@ startButton.addEventListener("click", () => {
     canvas.classList.remove("hide");
     coverScreen.classList.add("hide");
     createRandomFruit();
-    randomCreationTime = generateRandomNumber(3, 9);
+    randomCreationTime = generateRandomNumber(1, 3);
     interval = setInterval(createRandomFruit,
         randomCreationTime * 1000);
     scoreContainer.classList.remove("hide");
